@@ -82,6 +82,7 @@ def analyze_syntax():
     return
 
 if __name__ == "__main__":
-    initLexicalAnalyzer()
+    initLexicalAnalyzer(str(10))
     analyze_syntax()
+    
         
