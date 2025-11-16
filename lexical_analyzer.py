@@ -272,10 +272,12 @@ TYPE_FLOAT = 44
 TYPE_STRING = 45
 PRINT = 46
 
-def initLexicalAnalyzer():
+def initLexicalAnalyzer(i):
     global in_fp
-    if os.path.exists("input.txt"):
-        in_fp = open("input.txt", "r")
+    filename = f"input{i}.txt"  # f-string (plus moderne)
+
+    if os.path.exists(filename):
+        in_fp = open(filename, "r")
         getChar()
     else:
-        print("ERROR - cannot open input.txt")
+        print(f"ERROR - cannot open {filename}")

@@ -82,6 +82,8 @@ def analyze_syntax():
     return
 
 if __name__ == "__main__":
-    initLexicalAnalyzer()
-    analyze_syntax()
+    for i in range(1,11):
+        print(f"\nFichier d'entree: {i}")
+        initLexicalAnalyzer(str(i))
+        analyze_syntax()
         
