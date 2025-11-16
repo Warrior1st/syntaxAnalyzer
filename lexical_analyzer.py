@@ -159,7 +159,7 @@ def lookup(ch):
         elif nextChar == '*':
             addChar()
             getChar()
-            while not (nextChar == '*' and getChar() == '/'):
+            while not (nextChar == '*' and in_fp.read(1) == '/'):
                 if nextChar == '':
                     error = "Error - unclosed block comment"
                     nextToken = EOF
